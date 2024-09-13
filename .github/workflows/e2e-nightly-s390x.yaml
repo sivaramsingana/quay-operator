@@ -46,6 +46,7 @@ jobs:
         run: |
           wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/local/bin/yq
           chmod +x /usr/local/bin/yq
+          sudo echo "52.118.248.130 console-openshift-console.apps.quay-abi.abi.quay.ds oauth-openshift.apps.quay-abi.abi.quay.ds api.quay-abi.abi.quay.ds" | sudo tee -a /etc/hosts
 
       - name: setup kubeconfig
         run: |
