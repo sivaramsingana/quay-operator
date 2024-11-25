@@ -47,6 +47,10 @@ jobs:
           wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/local/bin/yq
           chmod +x /usr/local/bin/yq
 
+      - name: Add hosts to /etc/hosts
+        run: |
+          sudo echo "${{ secrets.HOST_IP }} ${{ secrets.HOSTNAME1 }} ${{ secrets.HOSTNAME2 }} ${{ secrets.HOSTNAME3 }}" | sudo tee -a /etc/hosts
+
       - name: setup kubeconfig
         run: |
           printf "${{ secrets.s390x_KUBE_CONFIG }}" > "${KUBECONFIG}"
