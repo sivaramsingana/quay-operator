@@ -8,4 +8,4 @@ spec:
   name: quay-operator-tng
   source: quay-operator-tng
   sourceNamespace: openshift-marketplace
-  startingCSV: quay-operator.v3.6.0-alpha.4
+  startingCSV: quay-operator.v3.10.0
