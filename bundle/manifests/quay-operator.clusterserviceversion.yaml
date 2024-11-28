@@ -45,7 +45,7 @@ metadata:
     features.operators.openshift.io/token-auth-aws: "false"
     features.operators.openshift.io/token-auth-azure: "false"
     features.operators.openshift.io/token-auth-gcp: "false"
-  name: quay-operator.v3.6.1
+  name: quay-operator.v3.10.0
   namespace: placeholder
   labels:
     operatorframework.io/arch.amd64: supported
@@ -279,4 +279,4 @@ spec:
       alm-owner-quay-operator: quay-operator
       operated-by: quay-operator
   version: 3.10.0
-  replaces: quay-operator.v3.6.0 ## Except for ".0", always put the previous z-stream here
+  replaces: quay-operator.v3.10.0 ## Except for ".0", always put the previous z-stream here
