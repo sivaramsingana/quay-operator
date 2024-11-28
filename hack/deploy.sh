@@ -32,7 +32,7 @@ function error {
 	>&2 echo "ERROR $(date '+%Y-%m-%dT%H:%M:%S') $*"
 }
 
-export TAG=${TAG:-'3.12-unstable'}
+export TAG=${TAG:-'3.10-unstable'}
 export CATALOG_PATH=${CATALOG_PATH:-'./bundle/quay-operator.catalogsource.yaml'}
 export CATALOG_IMAGE=${CATALOG_IMAGE:-"quay.io/projectquay/quay-operator-index:${TAG}"}
 export OG_PATH=${OG_PATH:-'./bundle/quay-operator.operatorgroup.yaml'}
