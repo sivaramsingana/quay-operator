@@ -2,14 +2,14 @@ apiVersion: operators.coreos.com/v1alpha1
 kind: ClusterServiceVersion
 metadata:
   annotations:
-    olm.skipRange: ">=3.5.x <3.6.1"
+    olm.skipRange: ">=3.5.x <3.13.1"
     capabilities: Full Lifecycle
     categories: Integration & Delivery
-    containerImage: quay.io/projectquay/quay-operator:v3.6.1
+    containerImage: quay.io/projectquay/quay-operator:v3.10.0
     createdAt: 2021-04-23T10:04:00Z
     support: Project Quay
     description: Opinionated deployment of Quay on Kubernetes.
-    quay-version: v3.6.1
+    quay-version: v3.10.0
     repository: https://github.com/quay/quay-operator
     tectonic-visibility: ocs
     alm-examples: |-
@@ -126,7 +126,7 @@ spec:
               spec:
                 containers:
                   - name: quay-operator
-                    image: quay.io/projectquay/quay-operator:v3.6.1
+                    image: quay.io/projectquay/quay-operator:v3.10.0
                     command:
                       - /workspace/manager
                       - '--namespace=$(WATCH_NAMESPACE)'
@@ -278,5 +278,5 @@ spec:
     matchLabels:
       alm-owner-quay-operator: quay-operator
       operated-by: quay-operator
-  version: 3.6.1
+  version: 3.10.0
   replaces: quay-operator.v3.6.0 ## Except for ".0", always put the previous z-stream here
