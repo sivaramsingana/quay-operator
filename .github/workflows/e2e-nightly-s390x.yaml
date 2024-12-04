@@ -55,10 +55,10 @@ jobs:
         run: |
           printf "${{ secrets.s390x_KUBE_CONFIG }}" > "${KUBECONFIG}"
 
-      - name: deploy
-        env:
-          CATALOG_IMAGE: quay.io/projectquay/quay-operator-index:${{ env.TAG }}
-        run: ./hack/deploy.sh
+#      - name: deploy
+#        env:
+#          CATALOG_IMAGE: quay.io/projectquay/quay-operator-index:${{ env.TAG }}
+#        run: ./hack/deploy.sh
 
       - name: E2E Tests
         env:
